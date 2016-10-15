@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <link rel="icon" href="http://icons.iconarchive.com/icons/graphicloads/polygon/128/bus-icon.png">
+  <body>
+    <div id="busmap" style="width:100%;height:100vh"></div>
+    <script>
+      function myMap() {
+      var mapCanvas = document.getElementById("busmap");
+      var mapOptions = {
+        center: new google.maps.LatLng(10.058868,105.766196), 
+        zoom: 15
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyCpqK0y2zfq5DoD_KLsoWn3Ec7-BjY0k80"></script>
+    <script language="javascript">
+      document.onmousedown=disableclick;
+      status="Anti view source of page :)";
+      function disableclick(event){
+        if(event.button==2){
+          alert(status);
+          return false;    
+        }
+      }
+    </script>
+  </body>
+</html>
