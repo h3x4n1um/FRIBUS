@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule main index.html
+RewriteRule map busmap.html
+RewriteRule calculator cost.php
