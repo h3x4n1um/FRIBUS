@@ -50,14 +50,14 @@
 			</div>
 		</center>
 		<script language="javascript">
-		document.onmousedown=disableclick;
-		status="Anti view source of page :)";
-		function disableclick(event){
-			if(event.button==2){
-			alert(status);
-			return false;    
+			document.onmousedown=disableclick;
+			status="Anti view source of page :)";
+			function disableclick(event){
+				if(event.button==2){
+				alert(status);
+				return false;
+				}
 			}
-		}
 		</script>
 	</body>
 </html>
