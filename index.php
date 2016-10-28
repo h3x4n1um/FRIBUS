@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html>
   <title>FRIBUS.TK</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <body>
 
     <!-- Side Navigation -->
