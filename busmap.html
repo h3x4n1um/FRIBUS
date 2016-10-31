@@ -104,7 +104,6 @@
         infoWindow.setContent(browserHasGeolocation ?
                               'Lỗi: Định vị thất bại.':
                               'Lỗi: Trình duyệt của bạn không hỗ trợ định vị.');
-        if (browserHasGeolocation) alert("Google Maps giao thức HTTP chưa hỗ trợ đối với trình duyệt bạn");
       }
 
       google.maps.event.addDomListener(window, 'load', function(){

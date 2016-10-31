@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-  <title>FRIBUS.TK</title>
+  <title>FRIBUS</title>
   <body>
 
     <!-- Side Navigation -->
