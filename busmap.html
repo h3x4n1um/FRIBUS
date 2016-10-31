@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
   <link rel="icon" href="http://icons.iconarchive.com/icons/graphicloads/polygon/128/bus-icon.png">
   <head>
     <title>Busmap</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -28,10 +27,10 @@
       var infowindow;
       var service;
       function initialize(){
-        var pos = new google.maps.LatLng(10.0485998, 105.7879486);
+        var pos = new google.maps.LatLng(10.0453833, 105.7796137);
         map = new google.maps.Map(document.getElementById('map'), {
           center: pos,
-          zoom: 12
+          zoom: 17
         });
         infoWindow = new google.maps.InfoWindow({map: map});
         // Try HTML5 geolocation.
@@ -45,7 +44,13 @@
               infoWindow.setPosition(pos);
               infoWindow.setContent('Vị trí của bạn.');
               map.setCenter(pos);
-              return pos;
+              var request = {
+                location: pos,
+                radius: 500,
+                types: ['bus_station']
+              };
+              service = new google.maps.places.PlacesService(map);
+              service.search(request, callback);
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
             }
@@ -54,13 +59,6 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
-        var request = {
-              location: pos,
-              radius: 1000,
-              types: ['bus_station']
-        };
-        service = new google.maps.places.PlacesService(map);
-        service.search(request, callback);
       }
 
       function callback(results, status) {
@@ -106,22 +104,12 @@
         infoWindow.setContent(browserHasGeolocation ?
                               'Lỗi: Định vị thất bại.':
                               'Lỗi: Trình duyệt của bạn không hỗ trợ định vị.');
-        if (browserHasGeolocation) alert("Bạn đang dùng trình duyệt mã nguồn Chromium hoặc Safari?");
+        if (browserHasGeolocation) alert("Google Maps giao thức HTTP chưa hỗ trợ đối với trình duyệt bạn");
       }
 
       google.maps.event.addDomListener(window, 'load', function(){
         initialize();
       });
-    </script>
-    <script language="javascript">
-      document.onmousedown=disableclick;
-      status="Anti view source of page :)";
-      function disableclick(event){
-        if(event.button==2){
-          alert(status);
-          return false;    
-        }
-      }
     </script>
     <div id="map"></div>
   </body>

@@ -1,89 +1,59 @@
+<?php
+    include 'header.html';
+?>
+
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<body>
+  <title>FRIBUS.TK</title>
+  <body>
 
-<!-- Side Navigation -->
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="mySidenav">
-  <h1 class="w3-xxxlarge w3-text-teal">Side Navigation</h1>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)">Link 1</a>
-  <a href="javascript:void(0)">Link 2</a>
-  <a href="javascript:void(0)">Link 3</a>
-  <a href="javascript:void(0)">Link 4</a>
-  <a href="javascript:void(0)">Link 5</a>
-</nav>
+    <!-- Side Navigation -->
+    <!--<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="mySidenav">
+      <h1 class="w3-xxxlarge w3-text-teal">Điều hướng</h1>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Quay về <i class="fa fa-remove"></i></a>
+      <a href="busmap.html">Tìm kiếm trạm xe buýt</a>
+      <a href="cost.php">Tính chi phí dịch vụ</a>
+      <a href="javascript:void(0)">Tính khoảng cách giữa các quận, huyện</a>
+    </nav>-->
+    <!-- Modal -->
 
-<!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i>
-  <div class="w3-center">
-  <h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">BUILT WITH W3.CSS</h1>
-    <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
-    </div>
-  </div>
-</header>
-
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-8 w3-animate-top">
-      <header class="w3-container w3-theme-l1">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">×</span>
-        <h4>Oh snap! We just showed you a modal..</h4>
-        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-      </header>
-      <div class="w3-padding">
-        <p>Cool huh? Ok, enough teasing around..</p>
-        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    <div class="w3-row-padding w3-center w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+          <h4>Tìm kiếm trạm xe buýt</h4><br>
+          <a href="busmap.html">
+            <i class="fa fa-map-marker w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          </a>
+          <p>Tìm trạm xe buýt lân cận</p>
+        </div>
       </div>
-      <footer class="w3-container w3-theme-l1">
-        <p>Modal footer</p>
-      </footer>
+
+      <div class="w3-third">
+        <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+          <h4>Tính chi phí dịch vụ</h4><br>
+          <a href="cost.php">
+            <i class="fa fa-usd w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          </a>
+          <p>Dựa trên độ dài quảng đường</p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+          <h4>Tính khoảng cách giữa các quận, huyện</h4><br>
+          <i class="fa fa-map w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <p>Đo khoảng cách nhanh chóng, tiện lợi</p>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Responsive</h4><br>
-  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Built-in responsiveness</p>
-  <p>Mobile first fluid grid</p>
-  <p>Fits any screen sizes</p>
-  <p>PC Tablet and Mobile</p>
-  </div>
-</div>
+    <!--Music
+    <audio autoplay="autoplay" loop ="loop">
+      <source src="http://data.chiasenhac.com/downloads/1725/3/1724807-8ccb2484/m4a/Canon%20-%20London%20Philharmonic%20Orchestra_Da%20%5BM4A%20500kbps%5D.m4a" type="audio/mp4" />
+      <p>Your browser does not support HTML5 audio.</p>
+    </audio>-->
 
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Standard CSS</h4><br>
-  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Standard CSS only</p>
-  <p>Easy to learn</p>
-  <p>No need for jQuery</p>
-  <p>No JavaScript library</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Design</h4><br>
-  <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Paper like design</p>
-  <p>Bold colors and shadows</p>
-  <p>Equal across platforms</p>
-  <p>Equal across devices</p>
-  </div>
-</div>
-</div>
-
-<div class="w3-container">
+<!--<div class="w3-container">
 <hr>
 <div class="w3-center">
   <h2>Color Classes</h2>
@@ -148,7 +118,7 @@
     <h5>w3-quarter</h5>
   </div>
 </div>
-     
+
 <div class="w3-center">
   <h2>Containers</h2>
   <p>Use containers to create headers, sections and footers.</p>
@@ -351,7 +321,7 @@
     <label class="w3-validate"> Don't know (Disabled)</label>
   </div>
   </div>
-  
+
 </form>
 </div>
 <div class="w3-half">
@@ -519,103 +489,93 @@ class creates progress bars:</p>
     <li><a href="javascript:void(0)">»</a></li>
   </ul>
 </div>
-<br>
+<br>-->
 
-<!-- Footer -->
-<footer class="w3-container w3-theme-dark w3-padding-16">
-  <h3>Footer</h3>
-  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-light w3-padding">Go To Top</span> 
-    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-  <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
-</footer>
+    <!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+    <script>
+      // Side navigation
+      function w3_open() {
+        var x = document.getElementById("mySidenav");
+        x.style.width = "100%";
+        x.style.textAlign = "center";
+        x.style.fontSize = "50px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+      }
 
-<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
-<script>
-// Side navigation
-function w3_open() {
-    var x = document.getElementById("mySidenav");
-    x.style.width = "100%";
-    x.style.textAlign = "center";
-    x.style.fontSize = "50px";
-    x.style.paddingTop = "10%";
-    x.style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-}
+      // Tabs
+      function openCity(evt, cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        var activebtn = document.getElementsByClassName("testbtn");
+        for (i = 0; i < x.length; i++) {
+            activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " w3-dark-grey";
+      }
 
-// Tabs
-function openCity(evt, cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  var activebtn = document.getElementsByClassName("testbtn");
-  for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-dark-grey";
-}
+      var mybtn = document.getElementsByClassName("testbtn")[0];
+      mybtn.click();
 
-var mybtn = document.getElementsByClassName("testbtn")[0];
-mybtn.click();
+      // Accordions
+      function myAccFunc(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className += " w3-dark-grey";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+          x.previousElementSibling.className.replace(" w3-dark-grey", "");
+        }
+      }
 
-// Accordions
-function myAccFunc(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-dark-grey";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-dark-grey", "");
-    }
-}
+      // Slideshows
+      var slideIndex = 1;
 
-// Slideshows
-var slideIndex = 1;
+      function plusDivs(n) {
+        slideIndex = slideIndex + n;
+        showDivs(slideIndex);
+      }
 
-function plusDivs(n) {
-slideIndex = slideIndex + n;
-showDivs(slideIndex);
-}
+      function showDivs(n) {
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
 
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+      showDivs(1);
 
-showDivs(1);
-
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++;
-      elem.style.width = width + '%';
-      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
-    }
-  }
-}
-</script>
-
-</body>
+      // Progress Bars
+      function move() {
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width == 100) {
+            clearInterval(id);
+          } else {
+            width++;
+            elem.style.width = width + '%';
+            document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
 
+<?php
+    include 'footer.html';
+?>
