@@ -81,7 +81,7 @@
             function(response, stage) {
               if (stage ==  google.maps.DirectionsStatus.OK) {                
                 DirectionsRenderer.setDirections(response);
-                alert('Bến xe bus gàn nhất cách bạn ' + response.routes[0].legs[0].distance.text);
+                alert('Bến xe bus gần nhất cách bạn ' + response.routes[0].legs[0].distance.text);
               }
             }
           );
