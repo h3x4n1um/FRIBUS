@@ -21,12 +21,12 @@
   </head>
   <body>
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCpqK0y2zfq5DoD_KLsoWn3Ec7-BjY0k80"></script>
-
     <script type="text/javascript">
       var map;
       var infowindow;
       var pos = new google.maps.LatLng(10.0453833, 105.7796137);;
       var PlaceService;
+      var DirectionsService = new google.maps.DirectionsService();
       var DirectionsRenderer = new google.maps.DirectionsRenderer();
       function initialize(){
         map = new google.maps.Map(document.getElementById('map'), {
@@ -35,7 +35,7 @@
         });
         DirectionsRenderer.setMap(map);
         infoWindow = new google.maps.InfoWindow({map: map});
-        // Try HTML5 geolocation.
+        /*Try HTML5 geolocation.*/
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
             function(position){
@@ -55,41 +55,39 @@
                 types: ['bus_station']
               };
               PlaceService = new google.maps.places.PlacesService(map);
-              PlaceService.search(request, callback);
+              PlaceService.nearbySearch(request, callback);
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
             }
           );
         } else {
-          // Browser doesn't support Geolocation
+          /*Browser doesn't support Geolocation*/
           handleLocationError(false, infoWindow, map.getCenter());
         }
       }
-
-      function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          for (var i = 0; i < results.length; ++i) {
-            createMarker(results[i]);
+      function callback(PlaceResult, PlacesServiceStatus) {
+        if (PlacesServiceStatus == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < PlaceResult.length; ++i) {
+            createMarker(PlaceResult[i]);
           }
-          var waypoint_data = {
+          /*Create waypoint*/
+          var request = {
             origin: pos,
-            destination: results[0].geometry.location,
+            destination: PlaceResult[0].geometry.location,
             travelMode: google.maps.DirectionsTravelMode.WALKING
           }
-          var DirectionsService = new google.maps.DirectionsService();
-          DirectionsService.route(waypoint_data,
-            function(response, stage) {
-              if (stage ==  google.maps.DirectionsStatus.OK) {                
-                DirectionsRenderer.setDirections(response);
-                alert('Bến xe bus gần nhất cách bạn ' + response.routes[0].legs[0].distance.text);
+          DirectionsService.route(request,
+            function(DirectionsResult, DirectionsStatus) {
+              if (DirectionsStatus ==  google.maps.DirectionsStatus.OK) {                
+                DirectionsRenderer.setDirections(DirectionsResult);
+                alert('Bến xe bus gần nhất cách bạn ' + DirectionsResult.routes[0].legs[0].distance.text);
               }
             }
           );
         } else alert('Không có bến xe bus nào gần bạn.');
       }
-
+      /*Create maker*/
       function createMarker(place) {
-
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
           map: map,
@@ -101,8 +99,7 @@
                     '<br/><strong>Type:</strong>'+place.types[0]+
                     '<br/><strong>Rating:</strong>'+(place.rating||'n/a');
         var more_content='<img src="http://googleio2009-map.googlecode.com/svn-history/r2/trunk/app/images/loading.gif"/>';
-
-        //make a request for further details
+        /*make a request for further details*/
         PlaceService.getDetails({reference:place.reference}, function (place, status){
           if (status == google.maps.places.PlacesServiceStatus.OK){
             more_content='<hr/><strong><a href="'+place.url+'" target="details">Details</a>';
@@ -111,8 +108,6 @@
             }
           }
         });
-
-
         google.maps.event.addListener(marker, 'click', function(){
           infowindow.setContent(content+more_content);
           infowindow.open(map, this);
@@ -124,7 +119,6 @@
                               'Lỗi: Định vị thất bại.':
                               'Lỗi: Trình duyệt của bạn không hỗ trợ định vị.');
       }
-
       google.maps.event.addDomListener(window, 'load', function(){
         initialize();
       });
