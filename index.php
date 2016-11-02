@@ -21,7 +21,7 @@
       <div class="w3-third">
         <div class="w3-card-2 w3-padding-top" style="min-height:460px">
           <h4>Tìm kiếm trạm xe buýt</h4><br>
-          <a href="busmap.html">
+          <a href="busmap.php">
             <i class="fa fa-map-marker w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
           </a>
           <p>Tìm trạm xe buýt lân cận</p>
