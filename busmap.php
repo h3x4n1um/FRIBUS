@@ -4,7 +4,6 @@
 
 <!DOCTYPE html>
 <html>
-  <link rel="icon" href="http://icons.iconarchive.com/icons/graphicloads/polygon/128/bus-icon.png">
   <head>
     <title>Busmap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +27,7 @@
     <script type="text/javascript">
       var map;
       var infowindow;
-      var pos = new google.maps.LatLng(10.0453833, 105.7796137);;
+      var pos = new google.maps.LatLng(10.045412, 105.7795429);
       var PlaceService;
       var DirectionsService = new google.maps.DirectionsService();
       var DirectionsRenderer = new google.maps.DirectionsRenderer();
