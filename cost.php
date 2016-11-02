@@ -11,13 +11,13 @@
 	<center>
 		<div id="box">
 		<form action="" method="POST" id="frm-cost">
-          <div id="sokm">
-		    <md-input-container>
-		      <label>Nhập số km</label>
-		      <input type="text" name ='km' ng-model="user.postalCode">
-		    </md-input-container>
-			<button type ="submit" class="w3-btn w3-green btn-cost" name="submit">Xác nhận</button>
-          </div>
+        <div id="sokm">
+		      <md-input-container>
+		        <label>Nhập số km</label>
+		        <input type="text" name ='km' ng-model="user.postalCode">
+		      </md-input-container>
+			    <button type ="submit" class="w3-btn w3-green btn-cost" name="submit">Xác nhận</button>
+        </div>
 		</form>
 		<?php
 			$km = '';
