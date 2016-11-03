@@ -28,11 +28,11 @@
     <script type="text/javascript">
       var map;
       var infoWindow;
-      var pos = new google.maps.LatLng(10.045412, 105.7795429);
+      var pos = new google.maps.LatLng(10.0272537, 105.7698039);
       function initialize(){
         map = new google.maps.Map(document.getElementById('map'), {
           center: pos,
-          zoom: 17
+          zoom: 13
         });
       }
       google.maps.event.addDomListener(window, 'load', function(){

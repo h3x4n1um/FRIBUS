@@ -1,5 +1,5 @@
 <?php
-    include 'header.html';
+  include 'header.html';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
     <script type="text/javascript">
       var map;
       var infowindow;
-      var pos = new google.maps.LatLng(10.045412, 105.7795429);
+      var pos = new google.maps.LatLng(10.0590288, 105.7662794);
       var PlaceService;
       var DirectionsService = new google.maps.DirectionsService();
       var DirectionsRenderer = new google.maps.DirectionsRenderer();
@@ -131,5 +131,5 @@
 </html>
 
 <?php
-    include 'footer.html';
+  include 'footer.html';
 ?>
