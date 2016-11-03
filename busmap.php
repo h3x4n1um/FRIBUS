@@ -121,7 +121,8 @@
         infoWindow.setContent(browserHasGeolocation ?
                               'Lỗi: Định vị thất bại.':
                               'Lỗi: Trình duyệt của bạn không hỗ trợ định vị.');
-      }
+        if (browserHasGeolocation) alert('Geolocation HTML5 qua giao thức HTTP không hỗ trợ bởi trình duyệt của bạn. Xem thêm tại https://goo.gl/rStTGz')
+      } 
       google.maps.event.addDomListener(window, 'load', function(){
         initialize();
       });
