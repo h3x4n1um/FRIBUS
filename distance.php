@@ -34,12 +34,11 @@
           center: pos,
           zoom: 13
         });
-        /*TODO: using SQL data in google.maps.FusionTablesQuery
         var FusionTablesLayer = new google.maps.FusionTablesLayer({
           map: map,
           query: { 
-            from: ,
-            where:
+            from: '1Nncas7Hwf6w0NjFLRatQbHnqWm0oUbOT0Y6bzFjS',
+            id: '5'
           },
           styles: [{
             polygonOptions: {
@@ -51,7 +50,7 @@
             }
           }],
           
-        });*/
+        });
       }
       google.maps.event.addDomListener(window, 'load', function(){
         initialize();

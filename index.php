@@ -32,7 +32,7 @@
 
       <div class="w3-third">
         <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-          <h4>Tính khoảng cách giữa các quận, huyện</h4><br>
+          <h4>Tính khoảng cách giữa các quận, huyện, xã</h4><br>
           <a href="distance.php">
             <i class="fa fa-map w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
           </a>
