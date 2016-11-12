@@ -1,5 +1,6 @@
 <?php
-    include 'header.html';
+  include 'stdfribus.html';
+  include 'header.html';
 ?>
 
 <!DOCTYPE html>
@@ -51,5 +52,5 @@
 </html>
 
 <?php
-    include 'footer.html';
+  include 'footer.html';
 ?>

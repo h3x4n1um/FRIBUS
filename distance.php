@@ -1,4 +1,5 @@
 <?php
+  include 'stdfribus.html';
   include 'header.html';
 ?>
 
@@ -36,16 +37,21 @@
           zoom: 13
         });
         infoWindow = new google.maps.InfoWindow({map: map});
+        /*HTML5 geolocation*/
         if(navigator.geolocation){
           navigator.geolocation.getCurrentPosition(
             function(position){
+              /*Reset current position*/
               pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               }
+              /*Reset map center*/
               map.setCenter(pos);
+              /*Create window above position*/
               infoWindow.setPosition(pos);
               infoWindow.setContent('Vị trí của bạn.');
+              /*Geolocation city*/
               var Geocoder = new google.maps.Geocoder();
               Geocoder.geocode({location: pos}, function(GeocoderResult, GeocoderStatus){
                 if (GeocoderStatus == google.maps.GeocoderStatus.OK){
@@ -58,6 +64,7 @@
                     }
                   }
                 }
+                /*Draw a small map from fusion table*/
                 var FusionTablesLayer = new google.maps.FusionTablesLayer({
                   map: map,
                   query: { 

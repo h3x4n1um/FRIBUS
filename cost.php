@@ -1,4 +1,5 @@
 <?php
+	include 'stdfribus.html';
 	include 'header.html';
 ?>
 

@@ -1,4 +1,5 @@
 <?php
+  include 'stdfribus.html';
   include 'header.html';
 ?>
 
@@ -38,7 +39,7 @@
         });
         DirectionsRenderer.setMap(map);
         infoWindow = new google.maps.InfoWindow({map: map});
-        /*Try HTML5 geolocation.*/
+        /*HTML5 geolocation.*/
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
             function(position){
@@ -50,6 +51,7 @@
               /*Set window above location*/
               infoWindow.setPosition(pos);
               infoWindow.setContent('Vị trí của bạn.');
+              /*Reset map center*/
               map.setCenter(pos);
               /*Search bus station*/
               var request = {
