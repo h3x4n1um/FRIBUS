@@ -57,7 +57,8 @@
               /*Search bus station*/
               var request = {
                 location: pos,
-                radius: 1000,
+                openNow: true,
+                rankBy: google.maps.places.RankBy.DISTANCE,
                 types: ['bus_station']
               };
               PlaceService = new google.maps.places.PlacesService(map);
