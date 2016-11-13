@@ -48,6 +48,7 @@
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               };
+              console.log(pos);
               /*Set window above location*/
               infoWindow.setPosition(pos);
               infoWindow.setContent('Vị trí của bạn.');
@@ -83,13 +84,14 @@
           }
           DirectionsService.route(request,
             function(DirectionsResult, DirectionsStatus) {
-              if (DirectionsStatus ==  google.maps.DirectionsStatus.OK) {                
+              if (DirectionsStatus ==  google.maps.DirectionsStatus.OK){
+                console.log(DirectionsResult);              
                 DirectionsRenderer.setDirections(DirectionsResult);
                 alert('Bến xe bus gần nhất cách bạn ' + DirectionsResult.routes[0].legs[0].distance.text);
               }
             }
           );
-        } else alert('Không có bến xe bus nào gần bạn.');
+        } else alert('Không có bến xe bus nào gần bạn :(');
       }
       /*Create maker*/
       function createMarker(place) {

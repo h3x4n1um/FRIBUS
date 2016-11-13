@@ -23,17 +23,17 @@
 
       <div class="w3-third">
         <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-          <h4>Tính chi phí dịch vụ</h4><br>
+          <h4>Tính chi phí</h4><br>
           <a href="cost.php">
             <i class="fa fa-usd w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
           </a>
-          <p>Dựa trên độ dài quảng đường</p>
+          <p>Tính chi phí theo độ dài quảng đường</p>
         </div>
       </div>
 
       <div class="w3-third">
         <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-          <h4>Tính khoảng cách giữa các quận, huyện, xã</h4><br>
+          <h4>Đo khoảng cách giữa các quận, huyện và xã</h4><br>
           <a href="distance.php">
             <i class="fa fa-map w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
           </a>

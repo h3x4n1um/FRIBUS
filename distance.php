@@ -62,7 +62,7 @@
         fusion_table['Hải Dương'] = '18B99VzpSZV8-uiUkqJ54DLCjitbpPTz8B58EbyO0';
         fusion_table['Hải Phòng'] = '1p0k9WxRcYxHsAuU_8WfYc59OwyfDwN0wBnNOC3ui';
         fusion_table['Hậu Giang'] = '1RpYgr0ON9iIuUw30w9rdsFaHQsK_J5-1Qd5ZC68S';
-        fusion_table['TP Hồ Chí Minh'] = '1ltnm_Ixbltowtu33CBnvSkz-oIrqt1Fvxzef4TR4';
+        fusion_table['Hồ Chí Minh'] = '1ltnm_Ixbltowtu33CBnvSkz-oIrqt1Fvxzef4TR4';
         fusion_table['Hòa Bình'] = '1eAmV6SWHyVf0xnYPWdaOFiDTlFxMn3ldK38P3jIc';
         fusion_table['Hưng Yên'] = '1D5t09Rov_tCbzJ_P6lpm0zEjcveZRuT_HLyI8Har';
         fusion_table['Khánh Hòa'] = '11Z6MrKdkmJHnkaNPJSoT8JJgNI3JGagN5hXMZXZn';
@@ -90,7 +90,7 @@
         fusion_table['Thái Bình'] = '1lCl3Gi6EolBhI7loqzvBhjLx2iIQUvy2NwdS59yy';
         fusion_table['Thái Nguyên'] = '1XBWm65kQFxLfOs9ZDGt22weGe0AXwQaJCy0FK24E';
         fusion_table['Thanh Hóa'] = '16AfyqCjfaeAz_IidI21YM9oNZthy2Bep1IG8pDPb';
-        fusion_table['Thừa Thiên - Huế'] = '1MauEFioX-O7CwtKOiihhAda3dFga6yijF00VQWVu';
+        fusion_table['Thừa Thiên Huế'] = '1MauEFioX-O7CwtKOiihhAda3dFga6yijF00VQWVu';
         fusion_table['Tiền Giang'] = '1nM9AeKvFlkPrIBY0EBxFW9nhWgDgkS6snJP8MKyw';
         fusion_table['Trà Vinh'] = '1A8dJXdQtqe-0Hlax-0BqhjzULkjizPftzKBhWwlP';
         fusion_table['Tuyên Quang'] = '1YnEHTSDqO4iYS0ynPVdaM4hx-BeyJr2sjrk4WbxK';
@@ -115,6 +115,7 @@
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               }
+              console.log(pos);
               /*Reset map center*/
               map.setCenter(pos);
               /*Create window above position*/
@@ -124,6 +125,7 @@
               var Geocoder = new google.maps.Geocoder();
               Geocoder.geocode({location: pos}, function(GeocoderResult, GeocoderStatus){
                 if (GeocoderStatus == google.maps.GeocoderStatus.OK){
+                  console.log(GeocoderResult[0]);
                   for (var i = 0; i < GeocoderResult[0].address_components.length; ++i){
                     for (var j = 0; j < GeocoderResult[0].address_components[i].types.length; ++j){
                       if (GeocoderResult[0].address_components[i].types[j] == "administrative_area_level_1"){
@@ -133,7 +135,7 @@
                     }
                   }
                 }
-                console.log(fusion_table[city.short_name]);
+                console.log(city);
                 /*Draw a small map from fusion table*/
                 var FusionTablesLayer = new google.maps.FusionTablesLayer({
                   map: map,
