@@ -92,7 +92,7 @@
               }
             }
           );
-        } else alert('Không có bến xe bus nào gần bạn :(');
+        } else alert('Không có bến xe bus nào gần bạn vào lúc này :(');
       }
       /*Create maker*/
       function createMarker(place) {
