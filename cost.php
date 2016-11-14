@@ -30,24 +30,24 @@
 			    echo "<script>alert('$temp không phải là số!');</script>";
 			  }
 			  else{
-				$cost = (int) ($km / 42) * 17000;
-				$km = $km % 42;
-				if ($km >= 1 && $km <=3) $cost += 4000;
-				if ($km > 3 && $km <= 6) $cost += 5000;
-				if ($km > 6 && $km <= 9) $cost += 6000;
-				if ($km > 9 && $km <= 12) $cost += 7000;
-				if ($km > 12 && $km <= 15) $cost += 8000;
-				if ($km > 15 && $km <= 18) $cost += 9000;
-				if ($km > 18 && $km <= 21) $cost += 10000;
-				if ($km > 21 && $km <= 24) $cost += 11000;
-				if ($km > 24 && $km <= 27) $cost += 12000;
-				if ($km > 27 && $km <= 30) $cost += 13000;
-				if ($km > 30 && $km <= 33) $cost += 14000;
-				if ($km > 33 && $km <= 36) $cost += 15000;
-				if ($km > 36 && $km <= 39) $cost += 16000;
-				if ($km > 39 && $km <= 42) $cost += 17000;
-				if ($km <= 0) echo "<script>alert('Số km buộc phải lớn hơn hoặc bằng 1');</script>";
-				else echo "<script>alert('Chi phí cần là: $cost VND');</script>";
+	  			$cost = (int) ($km / 42) * 17000;
+		  		$km = $km % 42;
+			  	if ($km >= 1 && $km <=3) $cost += 4000;
+			  	if ($km > 3 && $km <= 6) $cost += 5000;
+				  if ($km > 6 && $km <= 9) $cost += 6000;
+				  if ($km > 9 && $km <= 12) $cost += 7000;
+				  if ($km > 12 && $km <= 15) $cost += 8000;
+				  if ($km > 15 && $km <= 18) $cost += 9000;
+				  if ($km > 18 && $km <= 21) $cost += 10000;
+				  if ($km > 21 && $km <= 24) $cost += 11000;
+				  if ($km > 24 && $km <= 27) $cost += 12000;
+				  if ($km > 27 && $km <= 30) $cost += 13000;
+				  if ($km > 30 && $km <= 33) $cost += 14000;
+				  if ($km > 33 && $km <= 36) $cost += 15000;
+				  if ($km > 36 && $km <= 39) $cost += 16000;
+				  if ($km > 39 && $km <= 42) $cost += 17000;
+				  if ($km <= 0) echo "<script>alert('Số km buộc phải lớn hơn hoặc bằng 1');</script>";
+				  else echo "<script>alert('Chi phí cần là: $cost VND');</script>";
 			  }
 			}
 		  ?>

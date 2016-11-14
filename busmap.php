@@ -106,7 +106,7 @@
                     '<br/><strong>Longitude:</strong>'+placeLoc.lng()+
                     '<br/><strong>Type:</strong>'+place.types[0]+
                     '<br/><strong>Rating:</strong>'+(place.rating||'n/a');
-        var more_content='<img src="http://googleio2009-map.googlecode.com/svn-history/r2/trunk/app/images/loading.gif"/>';
+        var more_content='<img src="https://web.archive.org/web/20131219005116/http://googleio2009-map.googlecode.com/svn-history/r2/trunk/app/images/loading.gif"/>';
         /*make a request for further details*/
         PlaceService.getDetails({reference:place.reference}, function (place, status){
           if (status == google.maps.places.PlacesServiceStatus.OK){
