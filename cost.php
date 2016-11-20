@@ -8,7 +8,7 @@
   <title>Tính tiền</title>
   <link rel="stylesheet" href="css/cost.css" media="screen" title="no title">
   <link rel="stylesheet" href="https://material.angularjs.org/1.1.0/angular-material.css">
-  <body ng-app="BlankApp" ng-cloak>
+  <body ng-app="FRIBUS cost" ng-cloak>
     <center>
 		  <div id="box">
 	      <form action="" method="POST" id="frm-cost">
@@ -66,7 +66,7 @@
 	    /**
 	    * You must include the dependency on 'ngMaterial' 
 	    */
-      angular.module('BlankApp', ['ngMaterial']);
+      angular.module('FRIBUS cost', ['ngMaterial']);
 	  </script>
   </body>
 </html>

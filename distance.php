@@ -33,6 +33,7 @@
       var infoWindow;
       var pos = new google.maps.LatLng(10.0272537, 105.7698039);
 
+      /*Initial fusion table*/
       function init_fusion_talbe(){
         fusion_table['An Giang'] = '155sn2EOpf5Kbx-W1otFFUrTO9CnNk__S2AN7RH0v';
         fusion_table['Bà Rịa - Vũng Tàu'] = '1vjCrk3MwJqHxqPYzUPfbT27KfR4F1In4dTo5wNm7';
