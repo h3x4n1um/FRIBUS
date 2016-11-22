@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-  <html>
+<html>
   <title>Tính tiền</title>
   <link rel="stylesheet" href="css/cost.css" media="screen" title="no title">
   <link rel="stylesheet" href="https://material.angularjs.org/1.1.0/angular-material.css">
