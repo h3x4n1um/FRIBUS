@@ -15,7 +15,7 @@
     <header class="w3-container w3-theme w3-padding" id="myHeader">
       <div class="w3-center">
         <h4>CHÀO MỪNG BẠN ĐẾN VỚI</h4>
-        <a href="index.php">
+        <a href="index.html">
           <h1 class="w3-xxxlarge w3-animate-bottom">FRIBUS</h1>
         </a>
         <div class="w3-padding-32">
@@ -46,7 +46,7 @@
 <html>
   <title>Tính tiền</title>
   <link rel="stylesheet" href="css/cost.css" media="screen" title="no title">
-  <link rel="stylesheet" href="https://material.angularjs.org/1.1.1/angular-material.css">
+  <link rel="stylesheet" href="https://material.angularjs.org/latest/angular-material.css">
   <body ng-app="FRIBUS cost" ng-cloak>
     <center>
       <div id="box">
@@ -115,7 +115,7 @@
   <body>
     <!-- Footer -->
     <footer class="w3-container w3-theme w3-padding-16">
-      <a href="index.php">
+      <a href="index.html">
         <h3>FRIBUS</h3>
       </a>
       <p>Được tạo bởi </p>
