@@ -1,4 +1,5 @@
 RewriteEngine On
 RewriteRule main index.html
-RewriteRule map busmap.php
+RewriteRule map busmap.html
+RewriteRule distance distance.html
 RewriteRule calculator cost.php
