@@ -1,0 +1,6 @@
+{
+  "name": "Fribus",
+  "tagline": "A easy way to find a bus",
+  "body": "# FRIBUS\r\n\r\nEasy to find a bus :)\r\n\r\n## ATTENTION\r\n\r\nIf you need this work on all browsers, you should have a SSL!\r\n\r\n## TODO list:\r\n\r\n* Find a host that support SSL and PHP\r\n* Finish [Distance](https://github.com/oobol2000oo/FRIBUS/blob/master/distance.html) function\r\n\r\n## P/s\r\n\r\nThis is [my](https://www.facebook.com/h3x4n1um) project with [my friend](https://www.facebook.com/jin.st742) when I study grade 11A2 in [Ly Tu Trong high school for the gifted](http://chuyenlytutrong.edu.vn/)\r\n\r\n## Credit\r\n\r\n* [Google Map JavaScript API] (https://developers.google.com/maps/documentation/javascript/reference)\r\n* [W3School Web Template] (http://www.w3schools.com/w3css/w3css_templates.asp)\r\n* [Font Awesome] (http://fontawesome.io/)\r\n* [Angular Material] (https://material.angularjs.org/latest/)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
