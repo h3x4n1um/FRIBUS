@@ -1,6 +1,6 @@
-<?php include
-  'stdfribus.html';
-  'header.html';
+<?php
+  include 'stdfribus.html';
+  include 'header.html';
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +51,6 @@
   </body>
 </html>
 
-<?php include
-  'footer.html';
+<?php
+  include 'footer.html';
 ?>
