@@ -20,4 +20,3 @@ This is [my](https://www.facebook.com/h3x4n1um) project with [my friend](https:/
 * [Google Map JavaScript API] (https://developers.google.com/maps/documentation/javascript/reference)
 * [W3School Web Template] (http://www.w3schools.com/w3css/w3css_templates.asp)
 * [Font Awesome] (http://fontawesome.io/)
-* [Angular Material] (https://material.angularjs.org/latest/)
