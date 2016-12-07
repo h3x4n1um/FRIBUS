@@ -3,3 +3,4 @@ RewriteRule main index.php
 RewriteRule map busmap.php
 RewriteRule distance distance.php
 RewriteRule calculator cost.php
+RewriteRule about index.html
