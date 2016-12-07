@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="image/bus-icon.png">
-  <link rel="stylesheet" href="css/w3.css">
-  <link rel="stylesheet" href="css/w3-theme-green.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
-</html>
-
-<!DOCTYPE html>
-<html>
-  <body>
-    <!-- Header -->
-    <header class="w3-container w3-theme w3-padding" id="myHeader">
-      <div class="w3-center">
-        <h4>CHÀO MỪNG BẠN ĐẾN VỚI</h4>
-        <a href="index.html">
-          <h1 class="w3-xxxlarge w3-animate-bottom">FRIBUS</h1>
-        </a>
-        <div class="w3-padding-32">
-          <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">ĐĂNG NHẬP</button>
-        </div>
-      </div>
-    </header>
-
-    <div id="id01" class="w3-modal">
-      <div class="w3-modal-content w3-card-8 w3-animate-top">
-        <header class="w3-container w3-theme-l1">
-          <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">×</span>
-          <h4>Chưa có gì hết :)</h4>
-          <h5>Đây mới là demo thôi <i class="fa fa-smile-o"></i></h5>
-        </header>
-        <div class="w3-padding">
-          <p>Tuyệt không?</p>
-        </div>
-        <footer class="w3-container w3-theme-l1">
-          <p>Beta version</p>
-        </footer>
-      </div>
-    </div>
-  </body>
-</html>
+<?php include
+  'stdfribus.html';
+  'header.html';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -110,22 +71,6 @@
   </body>
 </html>
 
-<!DOCTYPE html>
-<html>
-  <body>
-    <!-- Footer -->
-    <footer class="w3-container w3-theme w3-padding-16">
-      <a href="index.html">
-        <h3>FRIBUS</h3>
-      </a>
-      <p>Được tạo bởi </p>
-      <p><a href="https://www.facebook.com/h3x4n1um" target="_blank">Nguyễn Thanh Hoàng Hải</a></p>
-      <p><a href="https://www.facebook.com/jin.st742" target="_blank">Võ Nguyễn Trường Dĩ</a></p>
-      <p><a href="https://github.com/oobol2000oo/FRIBUS" target="_blank">Source Code</a></p>
-      <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-        <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-        <i class="fa fa-chevron-circle-up"></i></span></a>
-      </div>
-    </footer>
-  </body>
-</html>
+<?php include
+  'footer.html';
+?>
