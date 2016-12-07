@@ -1,0 +1,55 @@
+.including:before, .including:after {
+    content: " ";
+    display: table;
+}
+
+.including:after {
+    clear: both;
+}
+
+.including:before, .including:after {
+    content: " ";
+    display: table;
+}
+
+.including:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+h1, h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif !important;
+}
+#header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#header_image {
+    background: url('../image/header_background.png');
+    height: 600px;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+.about {
+    padding-top: 100px;
+    color: #fff;
+}
+.about h1 {
+    font-size: 50px;
+    text-shadow: 0 2px 0 rgba(0,0,0,.25);
+    font-family: 'Lobster' !important;
+}
+.about h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+.bus-car {
+    margin-top: 100px;
+    width: 450px;
+    text-align: center;
+}
+#logo {
+    width: 200px;
+}

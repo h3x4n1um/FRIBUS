@@ -15,7 +15,7 @@
       #map {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
+      /* Optional: Makes the page fill the window. */
       html, body {
         height: 100%;
         margin: 0;

@@ -1,21 +1,7 @@
-#box {
-  width: 300px;
-    height: 500px;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
-}
-#sokm {
-  color: #2ecc71;
-  width: 350px;
-  height: 40px;
-  font-family: tahoma;
-
-}
-button {
+.btn-cost {
   color: white;
   background-color: #2ecc71;
   border: #e67e22 1px;
+  height: 39px;
+  width: 100% !important;
 }

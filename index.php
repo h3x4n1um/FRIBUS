@@ -7,6 +7,15 @@
 <html>
   <title>FRIBUS</title>
   <body>
+    <!--Intro-->
+    
+    <div id="header_image">
+      <div class="about">
+        <h1 class="w3-center">Chào mừng các bạn đến với Fribus</h1>
+        <h3 class="w3-center">Website cung cấp các công cụ hỗ trợ sử dụng dịch vụ xe buýt công cộng</h3>
+        <center><img src="image/bus-car.png" class="bus-car" alt=""></center>
+      </div>
+    </div>
 
     <!-- Modal -->
 
