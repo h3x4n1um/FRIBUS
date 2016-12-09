@@ -9,7 +9,6 @@ If you need this work on all browsers, you should have a SSL!
 ## TODO list:
 
 * Find a host that support SSL and PHP
-* Finish [Distance](https://github.com/oobol2000oo/FRIBUS/blob/master/distance.php) function
 
 ## P/s
 

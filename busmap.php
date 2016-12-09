@@ -104,6 +104,7 @@
               alert('Bến xe bus cách bạn ' + DirectionsResult.routes[0].legs[0].distance.text);
 
               var marker = new google.maps.Marker({
+                animation: google.maps.Animation.DROP,
                 position: PlaceResult[i].geometry.location,
                 map: map,
                 title: 'Click để chuyển sang bến khác'
@@ -137,7 +138,7 @@
             if (status == google.maps.places.PlacesServiceStatus.OK){
               more_content = '<hr/><strong><a href="' + place.url + '" target="details">Details</a>';
               if(place.website){
-                more_content += '<br/><br/><strong><a href="' + place.website + '" target="details">'+place.website + '</a>';
+                more_content += '<br/><br/><strong><a href="' + place.website + '" target="details">' + place.website + '</a>';
               }
             }
           }
@@ -145,7 +146,7 @@
 
         google.maps.event.addListener(marker, 'click',
           function(){
-            infowindow.setContent(content+more_content);
+            infowindow.setContent(content + more_content);
             infowindow.open(map, this);
           }
         );
