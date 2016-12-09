@@ -37,9 +37,9 @@
         $get_input = false;
         for ($i = 1; isset($_POST['km' . (string) $i]); ++$i){
           $get_input = true;
-          $km += $_POST['km' . (string) $i];
+          $km = $_POST['km' . (string) $i];
           if ($km > 0){
-            $cost = (int) ($km / 42) * 17000;
+            $cost += (int) ($km / 42) * 17000;
             $km = $km % 42;
             if ($km >= 1 && $km <=3) $cost += 4000;
             if ($km > 3 && $km <= 6) $cost += 5000;
