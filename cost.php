@@ -38,7 +38,7 @@
         for ($i = 1; isset($_POST['km' . (string) $i]); ++$i){
           $get_input = true;
           $km = $_POST['km' . (string) $i];
-          if ($km > 0){
+          if ($km > 0 && $km < 43){
             $cost += (int) ($km / 42) * 17000;
             $km = $km % 42;
             if ($km >= 1 && $km <=3) $cost += 4000;
@@ -56,7 +56,7 @@
             if ($km > 36 && $km <= 39) $cost += 16000;
             if ($km > 39 && $km <= 42) $cost += 17000;
           }
-          else echo "<script>alert('Số km buộc phải lớn hơn hoặc bằng 1');</script>";
+          else echo "<script>alert('Số km buộc phải lớn hơn 0 và nhỏ hơn 43');</script>";
         }
 
         if ($get_input) echo "<script>alert('Chi phí cần là: $cost VND');</script>";
@@ -76,7 +76,7 @@
         box.setAttribute("placeholder", "Trạm " + i);
 
         document.getElementById("input-box").appendChild(div_box);
-        document.getElementById("box"+i).appendChild(box);
+        document.getElementById("box" + i).appendChild(box);
         
         console.log(div_box);
         console.log(box);
