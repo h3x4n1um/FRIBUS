@@ -23,7 +23,7 @@
       }
     </style>
   </head>
-  <body onload="incomplete()">
+  <body>
     <div id="map"></div>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyCpqK0y2zfq5DoD_KLsoWn3Ec7-BjY0k80"></script>
     <script type="text/javascript">
@@ -112,10 +112,6 @@
       google.maps.event.addDomListener(window, 'load', function(){
         initialize();
       });
-
-      function incomplete(){
-          alert('Under construction :)');
-      }
     </script>
   </body>
 </html>
