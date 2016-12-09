@@ -15,25 +15,30 @@
     <div style="width: 500px; margin-left: auto; margin-right: auto; margin-top: 50px; margin-bottom: 100px;">
       <form action="" method="POST" id="frm-cost">
         <div class="including">
-          <div style="float: left; width: 60%;">
-            <input type="text" name='km' class="w3-input" placeholder="Nhập số km">
-          </div>
-          <div style="float: right; width: 40%">
+          <center id="input-box">
+            <div style="width: 75%;" id="box1">
+              <input type="number" name='km1' class="w3-input" placeholder="Trạm 1">
+            </div>
+          </center>
+        </div>
+        <div class="including">
+          <div style="float:left; width: 40%;">
             <button type="submit" class="w3-btn w3-green btn-cost" name="submit">Xác nhận</button>
+          </div>
+          <div style="float:right; width: 40%;">
+            <button type="button" class="w3-btn w3-green btn-cost" onclick="add_box()">Thêm trạm</button>
           </div>
         </div>
       </form>
 
       <?php
-        $km = '';
+        $km = 0;
         $cost = 0;
-        if (isset($_POST['km'])){
-          $temp = $_POST['km'];
-          $km = (int) $temp;
-          if (strlen($km) != strlen($temp) || ($temp != '0' && $km == 0)){
-            echo "<script>alert('$temp không phải là số!');</script>";
-          }
-          else{
+        $get_input = false;
+        for ($i = 1; isset($_POST['km' . (string) $i]); ++$i){
+          $get_input = true;
+          $km += $_POST['km' . (string) $i];
+          if ($km > 0){
             $cost = (int) ($km / 42) * 17000;
             $km = $km % 42;
             if ($km >= 1 && $km <=3) $cost += 4000;
@@ -50,12 +55,34 @@
             if ($km > 33 && $km <= 36) $cost += 15000;
             if ($km > 36 && $km <= 39) $cost += 16000;
             if ($km > 39 && $km <= 42) $cost += 17000;
-            if ($km <= 0) echo "<script>alert('Số km buộc phải lớn hơn hoặc bằng 1');</script>";
-            else echo "<script>alert('Chi phí cần là: $cost VND');</script>";
           }
+          else echo "<script>alert('Số km buộc phải lớn hơn hoặc bằng 1');</script>";
         }
+
+        if ($get_input) echo "<script>alert('Chi phí cần là: $cost VND');</script>";
       ?>
     </div>
+    <script>
+      var i = 2;
+      function add_box(){
+        var div_box = document.createElement("div");
+        var box = document.createElement("input");
+
+        div_box.setAttribute("style", "width: 75%;");
+        div_box.setAttribute("id", "box" + i);
+        box.setAttribute("type", "number");
+        box.setAttribute("name", "km" + i);
+        box.setAttribute("class", "w3-input");
+        box.setAttribute("placeholder", "Trạm " + i);
+
+        document.getElementById("input-box").appendChild(div_box);
+        document.getElementById("box"+i).appendChild(box);
+        
+        console.log(div_box);
+        console.log(box);
+        ++i;
+      }  
+    </script>
   </body>
 </html>
 
